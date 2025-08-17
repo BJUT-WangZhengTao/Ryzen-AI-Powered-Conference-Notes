@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  cogpt-api:
+    image: geniucker/cogpt:latest
+    environment:
+      - HOST=0.0.0.0
+    ports:
+      - 8084:8080
+    volumes:
+      - ./db:/app/db
+      - ./log:/app/log
+    restart: unless-stopped
+    container_name: cogpt-api
