@@ -1,0 +1,32 @@
+#datasource
+server:
+  port: 8083
+#  port: 3389
+spring:
+  datasource:
+#    url: jdbc:mysql://152.136.111.58:3306/qixiubao?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&useSSL=false&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://localhost:3306/site?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#    type: com.alibaba.druid.pool.DruidDataSource
+#mybatis
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml #mapper的映射文件路径
+  type-aliases-package: com.siteapplet.siteproject.domain #配置别名
+  configuration:
+    # 开启数据库: a_b -> 实体类: aB 转化
+    use-generated-keys: true
+    map-underscore-to-camel-case: true
+web:
+  uploadPath: C:/Users/GY-CTGI/Desktop/data/images/
+
+contractPdfFilePath: C:/Users/GY-CTGI/Desktop/data/files/
+
+
+api-key: sk-df302754ac424760b1961b64dab5020d
+
+DASHSCOPE_API_KEY: sk-df302754ac424760b1961b64dab5020d
+
+zuul:
+  servlet-path: /
